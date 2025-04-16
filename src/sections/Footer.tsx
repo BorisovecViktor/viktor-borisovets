@@ -11,8 +11,8 @@ export const Footer = () => {
   ]
 
   return (
-    <footer className="bg-stone-900 text-white px-5 pt-25 lg:px-10">
-      <div>
+    <footer className="bg-stone-900 text-white pt-25">
+      <div className="container">
         <div className="section">
           <div className="flex items-center gap-3">
             <div className="size-3 rounded-full bg-green-400"></div>
