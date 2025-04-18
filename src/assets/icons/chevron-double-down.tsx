@@ -4,7 +4,7 @@ type Props = {
   className: string
 }
 
-export const ArrowUpRightIcon = ({ className }: Props) => (
+export const ChevronDoubleDownIcon = ({ className }: Props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -16,7 +16,7 @@ export const ArrowUpRightIcon = ({ className }: Props) => (
     <path
       strokeLinecap="round"
       strokeLinejoin="round"
-      d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+      d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
     />
   </svg>
 )

@@ -27,4 +27,11 @@
       var(--color-orange-500) 50%
     );
   }
+  .border-red-orange-500 {
+    border-color: color-mix(
+      in oklab,
+      var(--color-red-500) 50%,
+      var(--color-orange-500) 50%
+    );
+  }
 }

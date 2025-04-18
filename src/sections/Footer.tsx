@@ -23,7 +23,7 @@ export const Footer = () => {
               <h2 className="text-4xl md:text-7xl mt-8 lg:text-8xl font-extralight">
                 Enough talk. Let&apos;s make something great together.
               </h2>
-              <OutlinedButton icon={<ArrowUpRightIcon />} />
+              <OutlinedButton icon={<ArrowUpRightIcon className="size-6" />} />
             </div>
             <div>
               <nav className="flex flex-col md:items-end gap-8 mt-16 md:mt-0">
