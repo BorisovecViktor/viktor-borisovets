@@ -21,7 +21,7 @@
 //   },
 // ];
 
-import { BarsIcon } from '@/assets/icons/bars'
+import { BarsIcon } from '@/assets/icons'
 import { Button } from '@/components'
 import Link from 'next/link'
 

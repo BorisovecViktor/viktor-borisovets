@@ -1,1 +1,5 @@
+export * from './arrow-left'
+export * from './arrow-right'
 export * from './arrow-up-right'
+export * from './chevron-double-down'
+export * from './bars'

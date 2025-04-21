@@ -1,4 +1,4 @@
-import { ChevronDoubleDownIcon } from '@/assets/icons/chevron-double-down'
+import { ChevronDoubleDownIcon } from '@/assets/icons'
 import Image from 'next/image'
 import heroImage from '@/assets/images/hero-image.jpg'
 import { Button } from '@/components'

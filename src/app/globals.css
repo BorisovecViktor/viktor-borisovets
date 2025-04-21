@@ -20,6 +20,13 @@
 }
 
 @layer utilities {
+  .text-red-orange-500 {
+    color: color-mix(
+      in oklab,
+      var(--color-red-500) 50%,
+      var(--color-orange-500) 50%
+    );
+  }
   .bg-red-orange-500 {
     background-color: color-mix(
       in oklab,
@@ -34,4 +41,8 @@
       var(--color-orange-500) 50%
     );
   }
+}
+
+.section {
+  @apply py-24 md:py-32 lg:py-40;
 }
