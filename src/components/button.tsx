@@ -12,7 +12,7 @@ export const Button = (
   return (
     <button
       className={twMerge(
-        'h-11 px-6 rounded-xl border border-red-orange-500 uppercase inline-flex items-center gap-2',
+        'h-11 px-6 rounded-xl border border-red-orange-500 uppercase inline-flex items-center gap-2 cursor-pointer',
         variant === 'primary' && 'bg-red-orange-500 text-white',
         variant === 'secondary' && '',
         variant === 'text' && 'h-auto px-0 border-transparent',

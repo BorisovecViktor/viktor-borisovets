@@ -32,7 +32,7 @@ const projects = [
 
 export const Projects = () => {
   return (
-    <section className="section">
+    <section id="projects" className="section">
       <div className="container">
         <h2 className="text-4xl md:text-7xl lg:text-8xl">Selected works</h2>
         <div className="mt-10 md:mt-16 lg:mt-20">

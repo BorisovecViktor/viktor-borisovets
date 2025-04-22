@@ -39,7 +39,7 @@ export const Testimonials = () => {
   const textTestimonialsIndex = 0
 
   return (
-    <section className="section">
+    <section id="testimonials" className="section">
       <h2 className="text-4xl md:text-7xl lg:text-8xl flex flex-col overflow-hidden tracking-tighter">
         <span className="whitespace-nowrap">
           Some nice words from my past clients
