@@ -27,7 +27,9 @@
       var(--color-orange-500) 50%
     );
   }
-  .bg-red-orange-500 {
+  .bg-red-orange-500,
+  .bg-red-orange-hover:hover,
+  .bg-red-orange-after:after {
     background-color: color-mix(
       in oklab,
       var(--color-red-500) 50%,
@@ -45,4 +47,12 @@
 
 .section {
   @apply py-24 md:py-32 lg:py-40;
+}
+
+.line {
+  @apply overflow-hidden;
+}
+
+.word {
+  @apply translate-y-full;
 }
