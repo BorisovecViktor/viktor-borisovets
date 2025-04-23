@@ -47,7 +47,7 @@ export const Header = () => {
         [bottomLineScope.current, { rotate: -45 }],
       ])
 
-      navAnimate(navScope.current, { height: '100%' }, { duration: 0.7 })
+      navAnimate(navScope.current, { height: '100%' }, { duration: 0.5 })
     } else {
       topLineAnimate([
         [topLineScope.current, { rotate: 0 }],
