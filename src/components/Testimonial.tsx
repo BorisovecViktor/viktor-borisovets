@@ -100,7 +100,7 @@ export const Testimonial = (props: Props & HTMLAttributes<HTMLDivElement>) => {
           ref={citeScope}
           className="mt-4 md:mt-8 not-italic block md:text-lg lg:text-xl"
         >
-          {name}, {role} at {company}
+          {`${name}, ${role} at ${company}`}
         </cite>
       </blockquote>
     </div>

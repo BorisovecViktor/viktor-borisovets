@@ -2,7 +2,7 @@
 
 import { ChevronDoubleDownAnimatedIcon } from '@/assets/icons'
 import Image from 'next/image'
-import heroImage from '@/assets/images/hero-image.jpg'
+import heroImage from '@/assets/images/hero.jpg'
 import { Button } from '@/components'
 import { motion, useScroll, useTransform } from 'motion/react'
 import { useEffect, useRef } from 'react'
