@@ -42,21 +42,17 @@ export const Testimonial = (props: Props & HTMLAttributes<HTMLDivElement>) => {
   const [isPresent, safeToRemove] = usePresence()
 
   useEffect(() => {
-    if (isPresent) {
-      const entranceAnimate = async () => {
+    const entranceAnimate = async () => {
+      if (isPresent) {
         await quoteEntranceAnimation()
-        await citeEntranceAnimation()
-      }
-
-      entranceAnimate()
-    } else {
-      const exitAnimate = async () => {
+        citeEntranceAnimation()
+      } else {
         await Promise.all([quoteExitAnimation(), citeExitAnimation()])
         safeToRemove()
       }
-
-      exitAnimate()
     }
+
+    entranceAnimate()
   }, [
     isPresent,
     citeEntranceAnimation,

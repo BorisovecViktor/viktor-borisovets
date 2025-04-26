@@ -1,7 +1,7 @@
 'use client'
 
 import { stagger, useAnimate } from 'motion/react'
-import { useEffect } from 'react'
+import { useCallback, useEffect } from 'react'
 import SplitType from 'split-type'
 
 export const useTextRevealAnimation = () => {
@@ -14,7 +14,7 @@ export const useTextRevealAnimation = () => {
     })
   }, [scope])
 
-  const entranceAnimation = () => {
+  const entranceAnimation = useCallback(() => {
     return animate(
       scope.current.querySelectorAll('.word'),
       {
@@ -25,9 +25,9 @@ export const useTextRevealAnimation = () => {
         delay: stagger(0.15),
       },
     )
-  }
+  }, [scope, animate])
 
-  const exitAnimation = () => {
+  const exitAnimation = useCallback(() => {
     return animate(
       scope.current.querySelectorAll('.word'),
       {
@@ -40,7 +40,7 @@ export const useTextRevealAnimation = () => {
         }),
       },
     )
-  }
+  }, [scope, animate])
 
   return {
     scope,
