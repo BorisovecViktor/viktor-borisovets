@@ -80,7 +80,7 @@ export const Footer = () => {
           </div>
         </div>
         <p className="py-16 text-white/30 text-sm">
-          Copyright &copy; Borisovets Viktor &bull; All rights reserved
+          Copyright &copy; Viktor Borisovets &bull; All rights reserved
         </p>
       </div>
     </footer>
