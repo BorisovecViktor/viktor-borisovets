@@ -7,6 +7,7 @@ const archivo = Archivo({
   weight: 'variable',
   subsets: ['latin'],
   variable: '--font-archivo',
+  preload: false,
 })
 
 export const metadata: Metadata = {
