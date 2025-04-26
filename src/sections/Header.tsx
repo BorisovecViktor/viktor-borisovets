@@ -134,7 +134,10 @@ export const Header = () => {
                   bottomLineScope={bottomLineScope}
                 />
               </div>
-              <Button variant="primary" className="hidden md:inline-flex">
+              <Button
+                variant="primary"
+                className="hidden md:inline-flex animate-bounce"
+              >
                 Contact Me
               </Button>
             </div>

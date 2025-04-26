@@ -4,42 +4,29 @@ import { ChevronDoubleDownAnimatedIcon } from '@/assets/icons'
 import Image from 'next/image'
 import heroImage from '@/assets/images/hero-image.jpg'
 import { Button } from '@/components'
-import SplitType from 'split-type'
-import {
-  motion,
-  stagger,
-  useAnimate,
-  useScroll,
-  useTransform,
-} from 'motion/react'
+import { motion, useScroll, useTransform } from 'motion/react'
 import { useEffect, useRef } from 'react'
+import { useTextRevealAnimation } from '@/hooks/useTextRevealAnimation'
 
 export const Hero = () => {
-  const [titleScope, titleAnimate] = useAnimate()
   const scrollingDiv = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: scrollingDiv,
     offset: ['start end', 'end end'],
   })
   const portraitWidth = useTransform(scrollYProgress, [0, 1], ['100%', '240%'])
+  const { scope, entranceAnimation } = useTextRevealAnimation()
 
   useEffect(() => {
-    new SplitType(titleScope.current, {
-      types: 'lines,words',
-      tagName: 'span',
-    })
+    entranceAnimation()
+  }, [entranceAnimation])
 
-    titleAnimate(
-      titleScope.current.querySelectorAll('.word'),
-      {
-        transform: 'translateY(-105%)',
-      },
-      {
-        duration: 0.5,
-        delay: stagger(0.2),
-      },
-    )
-  }, [titleScope, titleAnimate])
+  const handleClick = () => {
+    const target = document.querySelector('#projects')
+
+    if (!target) return
+    target.scrollIntoView({ behavior: 'smooth' })
+  }
 
   return (
     <section>
@@ -47,7 +34,7 @@ export const Hero = () => {
         <div className="md:col-span-7 flex flex-col justify-center">
           <div className="container !max-w-full">
             <motion.h1
-              ref={titleScope}
+              ref={scope}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               className="text-5xl md:text-6xl lg:text-7xl mt-40 md:mt-0"
@@ -66,6 +53,7 @@ export const Hero = () => {
                 <Button
                   variant="secondary"
                   iconAfter={<ChevronDoubleDownAnimatedIcon />}
+                  onClick={handleClick}
                 >
                   <span>View my works</span>
                 </Button>
