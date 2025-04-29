@@ -1,6 +1,6 @@
 'use client'
 
-import { Dispatch, SetStateAction, useEffect, useState } from 'react'
+import { Dispatch, SetStateAction, useState } from 'react'
 import { Button } from './button'
 import { Modal } from './modal'
 import { Controller, useForm } from 'react-hook-form'
@@ -39,19 +39,13 @@ export const ContactForm = ({ isOpen, toggleContact }: Props) => {
   const {
     control,
     handleSubmit,
-    formState: { errors, isSubmitSuccessful, isSubmitting },
+    formState: { errors, isSubmitting },
     reset,
   } = useForm<ContactFormFieldValues>({
     defaultValues: { name: '', email: '', message: '' },
     mode: 'onTouched',
     resolver: zodResolver(schema),
   })
-
-  useEffect(() => {
-    if (isSubmitSuccessful) {
-      reset()
-    }
-  }, [isSubmitSuccessful, reset])
 
   const onSubmit = async (data: ContactFormFieldValues) => {
     await fetch('https://api.web3forms.com/submit', {
@@ -73,6 +67,7 @@ export const ContactForm = ({ isOpen, toggleContact }: Props) => {
         if (json.success) {
           setIsSuccess(true)
           setMessage(json.message)
+          reset()
         } else {
           setIsSuccess(false)
           setMessage('Something went wrong. Try again later')
