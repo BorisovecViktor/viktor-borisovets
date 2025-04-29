@@ -1,6 +1,6 @@
 'use client'
 
-import { Dispatch, SetStateAction, useState } from 'react'
+import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 import { Button } from './button'
 import { Modal } from './modal'
 import { Controller, useForm } from 'react-hook-form'
@@ -47,6 +47,12 @@ export const ContactForm = ({ isOpen, toggleContact }: Props) => {
     resolver: zodResolver(schema),
   })
 
+  useEffect(() => {
+    if (isSubmitSuccessful) {
+      reset()
+    }
+  }, [isSubmitSuccessful, reset])
+
   const onSubmit = async (data: ContactFormFieldValues) => {
     await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
@@ -67,7 +73,6 @@ export const ContactForm = ({ isOpen, toggleContact }: Props) => {
         if (json.success) {
           setIsSuccess(true)
           setMessage(json.message)
-          reset()
         } else {
           setIsSuccess(false)
           setMessage('Something went wrong. Try again later')
@@ -81,7 +86,13 @@ export const ContactForm = ({ isOpen, toggleContact }: Props) => {
   }
 
   return (
-    <Modal isOpen={isOpen} toggleContact={toggleContact}>
+    <Modal
+      isOpen={isOpen}
+      onClose={() => {
+        toggleContact(false)
+        setMessage('')
+      }}
+    >
       <div className="grid grid-cols-2 gap-x-6 mb-12">
         <SocialsLink
           name="Instagram icon"
@@ -164,7 +175,7 @@ export const ContactForm = ({ isOpen, toggleContact }: Props) => {
           <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-red-500/30 to-transparent"></div>
         )}
       </form>
-      {isSubmitSuccessful && (
+      {message && (
         <div className="flex items-center justify-center text-center gap-3 mt-2">
           {isSuccess ? (
             <>

@@ -1,17 +1,17 @@
 import { CrossIcon } from '@/assets/icons'
-import { Dispatch, ReactNode, SetStateAction } from 'react'
+import { ReactNode } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 type Props = {
   isOpen: boolean
-  toggleContact: Dispatch<SetStateAction<boolean>>
+  onClose: () => void
   children: ReactNode
 }
 
-export const Modal = ({ isOpen, toggleContact, children }: Props) => {
+export const Modal = ({ isOpen, onClose, children }: Props) => {
   return (
     <div
-      onMouseDown={() => toggleContact(false)}
+      onMouseDown={onClose}
       className={twMerge(
         'fixed inset-0 flex justify-center items-center transition-all z-100',
         isOpen ? 'visible' : 'invisible',
@@ -25,7 +25,7 @@ export const Modal = ({ isOpen, toggleContact, children }: Props) => {
         )}
       >
         <button
-          onClick={() => toggleContact(false)}
+          onClick={onClose}
           className="absolute top-2 right-2 size-8 flex items-center justify-center rounded-full text-stone-900/70 bg-white hover:bg-stone-100 hover:text-stone-900 duration-500 cursor-pointer"
         >
           <CrossIcon className="size-5" />
