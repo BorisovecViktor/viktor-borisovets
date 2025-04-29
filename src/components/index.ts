@@ -1,5 +1,5 @@
 export * from './button'
 export * from './modal'
 export * from './contact-form'
-export * from './icon-info'
+export * from './socials-link'
 export * from './Testimonial'

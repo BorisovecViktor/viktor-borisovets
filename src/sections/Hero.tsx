@@ -5,10 +5,15 @@ import Image from 'next/image'
 import heroImage from '@/assets/images/hero.jpg'
 import { Button } from '@/components'
 import { motion, useScroll, useTransform } from 'motion/react'
-import { useEffect, useRef } from 'react'
+import { Dispatch, SetStateAction, useEffect, useRef } from 'react'
 import { useTextRevealAnimation } from '@/hooks/useTextRevealAnimation'
 
-export const Hero = () => {
+type Props = {
+  isOpenContact: boolean
+  toggleContact: Dispatch<SetStateAction<boolean>>
+}
+
+export const Hero = ({ isOpenContact, toggleContact }: Props) => {
   const scrollingDiv = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: scrollingDiv,
@@ -21,11 +26,17 @@ export const Hero = () => {
     entranceAnimation()
   }, [entranceAnimation])
 
-  const handleClick = () => {
+  const handleClickViewWorks = () => {
     const target = document.querySelector('#projects')
 
     if (!target) return
     target.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  const handleClickContact = () => {
+    if (!isOpenContact) {
+      toggleContact(true)
+    }
   }
 
   return (
@@ -53,7 +64,7 @@ export const Hero = () => {
                 <Button
                   variant="secondary"
                   iconAfter={<ChevronDoubleDownAnimatedIcon />}
-                  onClick={handleClick}
+                  onClick={handleClickViewWorks}
                 >
                   <span>View my works</span>
                 </Button>
@@ -66,7 +77,9 @@ export const Hero = () => {
                   delay: 2.2,
                 }}
               >
-                <Button variant="text">Let&apos;s Talk</Button>
+                <Button variant="text" onClick={handleClickContact}>
+                  I want to ask a question
+                </Button>
               </motion.div>
             </div>
           </div>

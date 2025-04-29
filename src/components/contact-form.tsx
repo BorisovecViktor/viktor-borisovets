@@ -1,14 +1,14 @@
 import { Dispatch, SetStateAction } from 'react'
 import { Button } from './button'
 import { Modal } from './modal'
-import { MailIcon } from '@/assets/icons'
-import { PhoneIcon } from '@/assets/icons/phone'
-import { IconInfo } from './icon-info'
 import { Controller, useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { InputText } from './input-text'
 import { z } from 'zod'
 import { defaultSchema, emailSchema, isEmptyObject } from '@/services'
+import instagramIcon from '@/assets/images/instagram.png'
+import linkedinIcon from '@/assets/images/linkedin.png'
+import { SocialsLink } from './socials-link'
 
 export type ContactFormFieldValues = {
   name: string
@@ -23,9 +23,9 @@ const createSchema = () =>
     message: defaultSchema(500),
   })
 
-type Props = { isOpen: boolean; onClose: Dispatch<SetStateAction<boolean>> }
+type Props = { isOpen: boolean; toggleContact: Dispatch<SetStateAction<boolean>> }
 
-export const ContactForm = ({ isOpen, onClose }: Props) => {
+export const ContactForm = ({ isOpen, toggleContact }: Props) => {
   const schema = createSchema()
 
   const {
@@ -39,15 +39,17 @@ export const ContactForm = ({ isOpen, onClose }: Props) => {
   })
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose}>
+    <Modal isOpen={isOpen} toggleContact={toggleContact}>
       <div className="grid grid-cols-2 gap-x-6 mb-12">
-        <IconInfo
-          icon={<MailIcon className="w-8 h-8 mx-auto text-red-orange-500" />}
-          text="viktorborisovets@gmail.com"
+        <SocialsLink
+          name="Instagram icon"
+          href="https://www.instagram.com/viktorborisovets"
+          icon={instagramIcon}
         />
-        <IconInfo
-          icon={<PhoneIcon className="w-8 h-8 mx-auto text-red-orange-500" />}
-          text="+38(068)381-33-33"
+        <SocialsLink
+          name="Linkedin icon"
+          href="https://www.linkedin.com/in/viktor-borisovets"
+          icon={linkedinIcon}
         />
       </div>
       <form
@@ -65,7 +67,7 @@ export const ContactForm = ({ isOpen, onClose }: Props) => {
             <InputText
               type="text"
               label="Name"
-              placeholder="Enter name here..."
+              placeholder="Your name here..."
               field={field}
               fieldState={fieldState}
             />
@@ -78,7 +80,7 @@ export const ContactForm = ({ isOpen, onClose }: Props) => {
             <InputText
               type="email"
               label="Email"
-              placeholder="Enter email here..."
+              placeholder="Your email here..."
               field={field}
               fieldState={fieldState}
             />
@@ -91,7 +93,7 @@ export const ContactForm = ({ isOpen, onClose }: Props) => {
             <InputText
               type="textarea"
               label="Message"
-              placeholder="Enter message here..."
+              placeholder="What services you are interested in..."
               field={field}
               fieldState={fieldState}
             />

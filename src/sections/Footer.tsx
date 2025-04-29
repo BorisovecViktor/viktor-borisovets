@@ -4,7 +4,7 @@ import { Button } from '@/components'
 import { useTextRevealAnimation } from '@/hooks/useTextRevealAnimation'
 import { useInView } from 'motion/react'
 import Link from 'next/link'
-import { useEffect, MouseEvent } from 'react'
+import { useEffect, MouseEvent, Dispatch, SetStateAction } from 'react'
 
 const navItems = [
   { href: '#intro', label: 'About' },
@@ -14,7 +14,12 @@ const navItems = [
   { href: '#contact', label: 'Contact' },
 ]
 
-export const Footer = () => {
+type Props = {
+  isOpenContact: boolean
+  toggleContact: Dispatch<SetStateAction<boolean>>
+}
+
+export const Footer = ({ isOpenContact, toggleContact }: Props) => {
   const { scope, entranceAnimation } = useTextRevealAnimation()
   const inView = useInView(scope)
 
@@ -35,13 +40,19 @@ export const Footer = () => {
     target.scrollIntoView({ behavior: 'smooth' })
   }
 
+  const handleClickContact = () => {
+    if (!isOpenContact) {
+      toggleContact(true)
+    }
+  }
+
   return (
     <footer id="contact" className="bg-stone-900 text-white">
       <div className="container">
         <div className="section">
           <div className="flex items-center gap-3">
             <div className="size-3 rounded-full bg-green-400 animate-pulse"></div>
-            <span className="uppercase">One spot available for next month</span>
+            <span className="uppercase">Only one slot left this week</span>
           </div>
           <div className="grid md:grid-cols-3 md:items-center">
             <div className="md:col-span-2">
@@ -57,8 +68,9 @@ export const Footer = () => {
                   <ArrowUpRightIcon className="size-6 md:group-hover/button:translate-x-1/4 transition-transform duration-500" />
                 }
                 className="mt-8"
+                onClick={handleClickContact}
               >
-                viktorborisovets@gmail.com
+                Create a website and earn more
               </Button>
             </div>
             <div>

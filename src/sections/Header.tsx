@@ -1,7 +1,13 @@
 'use client'
 
 import Link from 'next/link'
-import { useEffect, useState, MouseEvent } from 'react'
+import {
+  useEffect,
+  useState,
+  MouseEvent,
+  Dispatch,
+  SetStateAction,
+} from 'react'
 import { ArrowUpRightIcon, BarsIcon } from '@/assets/icons'
 import { Button, ContactForm } from '@/components'
 import { useAnimate } from 'motion/react'
@@ -29,9 +35,13 @@ const navItems = [
   },
 ]
 
-export const Header = () => {
+type Props = {
+  isOpenContact: boolean
+  toggleContact: Dispatch<SetStateAction<boolean>>
+}
+
+export const Header = ({ isOpenContact, toggleContact }: Props) => {
   const [isOpenNav, setIsOpenNav] = useState(false)
-  const [isOpenContact, setIsOpenContact] = useState(false)
   const [topLineScope, topLineAnimate] = useAnimate()
   const [bottomLineScope, bottomLineAnimate] = useAnimate()
   const [navScope, navAnimate] = useAnimate()
@@ -86,13 +96,13 @@ export const Header = () => {
 
   const handleClickContact = () => {
     if (!isOpenContact) {
-      setIsOpenContact(true)
+      toggleContact(true)
     }
   }
 
   return (
     <>
-      <ContactForm isOpen={isOpenContact} onClose={setIsOpenContact} />
+      <ContactForm isOpen={isOpenContact} toggleContact={toggleContact} />
       <header>
         <div
           ref={navScope}
