@@ -8,6 +8,7 @@ import {
   Hero,
   Intro,
   Projects,
+  Tape,
   Testimonials,
 } from '@/sections'
 
@@ -19,6 +20,7 @@ const Home = () => {
       <Header isOpenContact={isOpenContact} toggleContact={setIsOpenContact} />
       <Hero isOpenContact={isOpenContact} toggleContact={setIsOpenContact} />
       <Intro />
+      <Tape />
       <Projects />
       <Testimonials />
       <FAQs />
