@@ -1,32 +1,47 @@
-import Image from 'next/image'
+import darkSaasLandingPage from '@/assets/images/dark-saas-landing-page.png'
+import lightSaasLandingPage from '@/assets/images/light-saas-landing-page.png'
+import aiStartupLandingPage from '@/assets/images/ai-startup-landing-page.png'
+import { CheckIcon, ArrowUpRightIcon } from '@/assets/icons'
 import Link from 'next/link'
-import { ArrowUpRightIcon } from '@/assets/icons'
-import image1 from '@/assets/images/project-1.jpg'
-import image2 from '@/assets/images/project-2.jpg'
-import image3 from '@/assets/images/project-3.jpg'
-import image4 from '@/assets/images/project-4.jpg'
-import image5 from '@/assets/images/project-5.jpg'
+import Image from 'next/image'
+import { Button, Card } from '@/components'
 
-const projects = [
+const portfolioProjects = [
   {
-    name: 'Artisan Brew Co.',
-    image: image1,
+    company: 'Acme Corp',
+    year: '2022',
+    title: 'Dark Saas Landing Page',
+    results: [
+      { title: 'Enhanced user experience by 40%' },
+      { title: 'Improved site speed by 50%' },
+      { title: 'Increased mobile traffic by 35%' },
+    ],
+    link: 'https://youtu.be/4k7IdSLxh6w',
+    image: darkSaasLandingPage,
   },
   {
-    name: 'Wavelength Studios',
-    image: image2,
+    company: 'Innovative Co',
+    year: '2021',
+    title: 'Light Saas Landing Page',
+    results: [
+      { title: 'Boosted sales by 20%' },
+      { title: 'Expanded customer reach by 35%' },
+      { title: 'Increased brand awareness by 15%' },
+    ],
+    link: 'https://youtu.be/7hi5zwO75yc',
+    image: lightSaasLandingPage,
   },
   {
-    name: 'Nova Fitness',
-    image: image3,
-  },
-  {
-    name: 'Urban Plates',
-    image: image4,
-  },
-  {
-    name: 'Bloom Botanicals',
-    image: image5,
+    company: 'Quantum Dynamics',
+    year: '2023',
+    title: 'AI Startup Landing Page',
+    results: [
+      { title: 'Enhanced user experience by 40%' },
+      { title: 'Improved site speed by 50%' },
+      { title: 'Increased mobile traffic by 35%' },
+    ],
+    link: 'https://youtu.be/Z7I5uSRHMHg',
+    image: aiStartupLandingPage,
   },
 ]
 
@@ -36,42 +51,61 @@ export const Projects = () => (
       <h2 className="text-4xl md:text-7xl lg:text-8xl">
         Last landing page projects
       </h2>
-      <div className="mt-10 md:mt-16 lg:mt-20">
-        {projects.map(({ name, image }) => (
-          <Link
-            key={name}
-            href="#"
-            className="border-t last:border-b border-stone-400 border-dotter py-6 md:py-8 lg:py-10 flex flex-col relative group/project"
-          >
-            <div className="absolute bottom-0 left-0 w-full h-0 group-hover/project:h-full transition-all duration-500 bg-stone-300"></div>
-            <div className="relative">
-              <div className="aspect-video md:hidden">
-                <Image
-                  src={image}
-                  alt={`${name} image`}
-                  className="w-full object-cover"
-                />
-              </div>
-              <div className="mt-8 md:mt-0 flex justify-between items-center md:grid md:[grid-template-columns:1fr_300px_max-content] md:gap-8 lg:gap-25">
-                <div className="md:group-hover/project:pl-4 lg:group-hover/project:pl-8 transition-all duration-500">
-                  <h3 className="text-2xl md:text-3xl lg:text-4xl">{name}</h3>
+      <p className="mt-4 text-xl md:text-3xl">
+        See how long I transformed concepts into engaging digital experiences
+      </p>
+      <div className="mt-10 md:mt-20 flex flex-col gap-20">
+        {portfolioProjects.map(
+          ({ title, company, year, results, link, image }, index) => (
+            <Card
+              key={title}
+              className="px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 lg:min-h-150 sticky"
+              style={{ top: `calc(80px + ${index * 40}px)` }}
+            >
+              <div className="lg:grid lg:grid-cols-2 lg:gap-16">
+                <div className="lg:pb-20">
+                  <div className="bg-gradient-to-r from-red-500 to-orange-500 inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">
+                    <span>{company}</span>
+                    <span>&bull;</span>
+                    <span>{year}</span>
+                  </div>
+                  <h3 className="text-2xl mt-2 md:mt-5 text-white md:text-4xl">
+                    {title}
+                  </h3>
+                  <hr className="border-t-2 border-white/8 mt-4 md:mt-5" />
+                  <ul className="flex flex-col gap-4 mt-4 md:mt-5">
+                    {results.map(({ title }) => (
+                      <li
+                        key={title}
+                        className="flex gap-2 text-sm md:text-base text-white/50"
+                      >
+                        <CheckIcon className="size-5 md:size-6" />
+                        <span>{title}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link href={link}>
+                    <Button
+                      variant="primary"
+                      iconAfter={<ArrowUpRightIcon className="size-5" />}
+                      // onClick={handleClickContact}
+                      className="w-full md:w-auto font-semibold mt-8"
+                    >
+                      Visit Live Site
+                    </Button>
+                  </Link>
                 </div>
                 <div className="relative">
-                  <div className="absolute aspect-video w-full top-1/2 -translate-y-1/2 opacity-0 scale-90 group-hover/project:opacity-100 group-hover/project:scale-100 lg:group-hover/project:scale-110 transition-all duration-500 z-1">
-                    <Image
-                      src={image}
-                      alt={`${name} image`}
-                      className="w-full object-cover"
-                    />
-                  </div>
-                </div>
-                <div className="md:group-hover/project:pr-4 lg:group-hover/project:pr-8 transition-all duration-500">
-                  <ArrowUpRightIcon className="size-6" />
+                  <Image
+                    src={image}
+                    alt={title}
+                    className="mt-8 -mb-4 md:-mb-0 md:mx-auto lg:mt-0 lg:absolute lg:max-w-none"
+                  />
                 </div>
               </div>
-            </div>
-          </Link>
-        ))}
+            </Card>
+          ),
+        )}
       </div>
     </div>
   </section>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Archivo } from 'next/font/google'
 import './globals.css'
+import { PropsWithChildren } from 'react'
 
 const archivo = Archivo({
   display: 'swap',
@@ -15,11 +16,7 @@ export const metadata: Metadata = {
   description: 'Created with love by Viktor Borisovets',
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
   return (
     <html lang="en">
       <body

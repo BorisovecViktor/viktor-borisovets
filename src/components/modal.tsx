@@ -1,14 +1,17 @@
 import { CrossIcon } from '@/assets/icons'
-import { ReactNode } from 'react'
+import { PropsWithChildren } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 type Props = {
   isOpen: boolean
   onClose: () => void
-  children: ReactNode
 }
 
-export const Modal = ({ isOpen, onClose, children }: Props) => {
+export const Modal = ({
+  isOpen,
+  onClose,
+  children,
+}: PropsWithChildren & Props) => {
   return (
     <div
       onMouseDown={onClose}

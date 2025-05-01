@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import {
   FAQs,
   Footer,
@@ -9,8 +10,6 @@ import {
   Projects,
   Testimonials,
 } from '@/sections'
-import { Project } from '@/sections/Project'
-import { useState } from 'react'
 
 const Home = () => {
   const [isOpenContact, setIsOpenContact] = useState(false)
@@ -20,7 +19,6 @@ const Home = () => {
       <Header isOpenContact={isOpenContact} toggleContact={setIsOpenContact} />
       <Hero isOpenContact={isOpenContact} toggleContact={setIsOpenContact} />
       <Intro />
-      <Project />
       <Projects />
       <Testimonials />
       <FAQs />
