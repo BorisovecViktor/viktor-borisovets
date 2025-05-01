@@ -78,7 +78,7 @@ export const Hero = ({ isOpenContact, toggleContact }: Props) => {
                 }}
               >
                 <Button variant="text" onClick={handleClickContact}>
-                  I want to ask a question
+                  Ask a question
                 </Button>
               </motion.div>
             </div>
