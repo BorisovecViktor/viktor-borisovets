@@ -16,8 +16,10 @@ export const CardHeader = ({ title, description, className }: Props) => (
   >
     <div className="inline-flex items-center gap-2">
       <StarsIcon className="size-9 text-red-orange-500" />
-      <h3 className="text-3xl">{title}</h3>
+      <h3 className="text-3xl 3xl:text-5xl">{title}</h3>
     </div>
-    <p className="text-sm lg:text-base max-w-xs mt-2">{description}</p>
+    <p className="text-sm lg:text-base 3xl:text-2xl max-w-xs mt-2">
+      {description}
+    </p>
   </div>
 )

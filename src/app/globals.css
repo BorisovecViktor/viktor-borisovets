@@ -5,6 +5,7 @@
   --breakpoint-sm: 375px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 1200px;
+  --breakpoint-3xl: 2000px;
 }
 
 @utility container {
@@ -43,6 +44,27 @@
       var(--color-red-500) 50%,
       var(--color-orange-500) 50%
     );
+  }
+}
+
+@theme {
+  --animate-move-left: move-left 1s linear infinite;
+  --animate-move-right: move-right 1s linear infinite;
+  @keyframes move-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes move-right {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
   }
 }
 
