@@ -47,6 +47,8 @@ export const Testimonials = () => {
   const transformTop = useTransform(scrollYProgress, [0, 1], ['0%', '15%'])
   const transformBottom = useTransform(scrollYProgress, [0, 1], ['0%', '-15%'])
   const [testimonialIndex, setTestimonialIndex] = useState(0)
+  const buttonClasses =
+    'border border-stone-400 size-11 inline-flex items-center justify-center rounded-full hover:bg-stone-900 hover:text-stone-200 transition-all duration-300 cursor-pointer'
 
   const handleClickPrev = () =>
     setTestimonialIndex((prev) => {
@@ -109,16 +111,10 @@ export const Testimonials = () => {
           </AnimatePresence>
         </div>
         <div className="flex gap-4 mt-6 lg:mt-10">
-          <button
-            onClick={handleClickPrev}
-            className="border border-stone-400 size-11 inline-flex items-center justify-center rounded-full bg-red-orange-hover hover:text-white border-red-orange-hover transition-all duration-300 cursor-pointer"
-          >
+          <button onClick={handleClickPrev} className={buttonClasses}>
             <ArrowLeftIcon className="size-6" />
           </button>
-          <button
-            onClick={handleClickNext}
-            className="border border-stone-400 size-11 inline-flex items-center justify-center rounded-full bg-red-orange-hover hover:text-white border-red-orange-hover transition-all duration-300 cursor-pointer"
-          >
+          <button onClick={handleClickNext} className={buttonClasses}>
             <ArrowRightIcon className="size-6" />
           </button>
         </div>

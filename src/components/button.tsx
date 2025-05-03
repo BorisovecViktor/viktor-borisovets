@@ -12,7 +12,7 @@ export const Button = (
   return (
     <button
       className={twMerge(
-        'relative group/button h-11 px-6 rounded-xl border border-red-orange-500 uppercase inline-flex items-center justify-center gap-2 transition-colors duration-300 ease-linear cursor-pointer',
+        'relative group/button h-11 px-4 rounded-xl border border-red-orange-500 uppercase inline-flex items-center justify-center gap-2 transition-colors duration-300 ease-linear cursor-pointer',
         variant === 'primary' &&
           'bg-gradient-to-r from-red-500 to-orange-500 hover:bg-gradient-to-l text-white',
         variant === 'secondary' && 'bg-red-orange-hover hover:text-white',

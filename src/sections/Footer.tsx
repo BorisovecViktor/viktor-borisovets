@@ -51,7 +51,9 @@ export const Footer = ({ isOpenContact, toggleContact }: Props) => {
       <div className="container">
         <div className="section">
           <div className="flex items-center gap-3">
-            <div className="size-3 rounded-full bg-green-400 animate-pulse"></div>
+            <div className="relative size-3 rounded-full bg-green-400">
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 inset-0 size-5 rounded-full bg-green-400 animate-ping"></div>
+            </div>
             <span className="uppercase">Only one slot left this week</span>
           </div>
           <div className="grid md:grid-cols-3 md:items-center">

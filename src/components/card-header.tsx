@@ -1,4 +1,4 @@
-import { StarIcon } from '@/assets/icons'
+import { StarsIcon } from '@/assets/icons'
 import { twMerge } from 'tailwind-merge'
 
 type Props = {
@@ -15,7 +15,7 @@ export const CardHeader = ({ title, description, className }: Props) => (
     )}
   >
     <div className="inline-flex items-center gap-2">
-      <StarIcon className="size-9 text-red-orange-500" />
+      <StarsIcon className="size-9 text-red-orange-500" />
       <h3 className="text-3xl">{title}</h3>
     </div>
     <p className="text-sm lg:text-base max-w-xs mt-2">{description}</p>

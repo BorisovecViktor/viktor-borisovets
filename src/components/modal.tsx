@@ -29,7 +29,7 @@ export const Modal = ({
       >
         <button
           onClick={onClose}
-          className="absolute top-2 right-2 size-8 flex items-center justify-center rounded-full text-stone-900/70 bg-white hover:bg-stone-100 hover:text-stone-900 duration-500 cursor-pointer"
+          className="absolute top-2 right-2 size-8 flex items-center justify-center rounded-full text-stone-900/70 bg-white hover:bg-stone-900 hover:text-stone-200 duration-500 cursor-pointer"
         >
           <CrossIcon className="size-5" />
         </button>

@@ -1,4 +1,4 @@
-import { StarIcon } from '@/assets/icons'
+import { StarsIcon } from '@/assets/icons'
 
 const words = [
   'Performant',
@@ -24,7 +24,7 @@ export const Tape = () => (
               <span className="text-white uppercase font-extrabold text-sm">
                 {word}
               </span>
-              <StarIcon className="size-6 text-white -rotate-3" />
+              <StarsIcon className="size-6 text-white -rotate-3" />
             </div>
           ))}
         </div>

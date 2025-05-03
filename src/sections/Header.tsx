@@ -130,19 +130,11 @@ export const Header = ({ isOpenContact, toggleContact }: Props) => {
         <div className="fixed top-0 left-0 w-full backdrop-blur-lg z-10">
           <div className="container !max-w-full">
             <div className="flex justify-between h-20 items-center">
-              <div>
-                <Link href="/">
-                  <span className="text-xl font-bold uppercase text-red-orange-500">
-                    Viktor&nbsp; Borisovets
-                  </span>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="fixed top-0 left-0 w-full z-10">
-          <div className="container !max-w-full">
-            <div className="flex justify-end h-20 items-center">
+              <Link href="#hero" onClick={handleClickNavItem}>
+                <span className="text-xl font-bold uppercase text-red-orange-500">
+                  Viktor&nbsp; Borisovets
+                </span>
+              </Link>
               <div className="flex items-center gap-4">
                 <div
                   onClick={() => setIsOpenNav(!isOpenNav)}
