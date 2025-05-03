@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { useEffect, MouseEvent, Dispatch, SetStateAction } from 'react'
 
 const navItems = [
-  { href: '#intro', label: 'About' },
+  { href: '#about', label: 'About' },
   { href: '#projects', label: 'Projects' },
   { href: '#testimonials', label: 'Testimonials' },
   { href: '#faqs', label: 'Faqs' },
@@ -70,7 +70,7 @@ export const Footer = ({ isOpenContact, toggleContact }: Props) => {
                 className="mt-8"
                 onClick={handleClickContact}
               >
-                Create a website and earn more
+                Create a website now
               </Button>
             </div>
             <div>

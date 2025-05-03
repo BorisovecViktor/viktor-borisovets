@@ -15,7 +15,7 @@ import { useAnimate } from 'motion/react'
 const navItems = [
   {
     label: 'About',
-    href: '#intro',
+    href: '#about',
   },
   {
     label: 'Projects',

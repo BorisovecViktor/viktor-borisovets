@@ -6,7 +6,7 @@ import {
   Footer,
   Header,
   Hero,
-  Intro,
+  About,
   Projects,
   Tape,
   Testimonials,
@@ -19,7 +19,7 @@ const Home = () => {
     <>
       <Header isOpenContact={isOpenContact} toggleContact={setIsOpenContact} />
       <Hero isOpenContact={isOpenContact} toggleContact={setIsOpenContact} />
-      <Intro />
+      <About />
       <Tape />
       <Projects />
       <Testimonials />
