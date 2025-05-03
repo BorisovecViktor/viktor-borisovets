@@ -70,7 +70,7 @@ export const Testimonials = () => {
     <section id="testimonials" className="section">
       <h2
         ref={titleRef}
-        className="text-4xl md:text-7xl lg:text-8xl flex flex-col overflow-hidden tracking-tighter"
+        className="text-4xl md:text-7xl lg:text-8xl font-semibold flex flex-col overflow-hidden tracking-tighter"
       >
         <motion.span
           className="whitespace-nowrap"

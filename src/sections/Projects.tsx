@@ -48,7 +48,7 @@ const portfolioProjects = [
 export const Projects = () => (
   <section id="projects" className="section">
     <div className="container">
-      <h2 className="text-4xl md:text-7xl lg:text-8xl">
+      <h2 className="text-4xl md:text-7xl lg:text-8xl font-semibold">
         Last landing page projects
       </h2>
       <p className="mt-4 text-xl md:text-3xl">

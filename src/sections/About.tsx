@@ -41,7 +41,10 @@ export const About = () => {
   return (
     <section id="about" ref={sectionRef} className="section">
       <div className="container">
-        <h2 ref={scope} className="text-4xl md:text-7xl lg:text-8xl lg:w-[80%]">
+        <h2
+          ref={scope}
+          className="text-4xl md:text-7xl lg:text-8xl lg:w-[80%] font-semibold"
+        >
           Building beautiful websites with clean code and thoughtful design to
           help your business and stand out online
         </h2>

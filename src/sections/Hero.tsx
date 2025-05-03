@@ -48,7 +48,7 @@ export const Hero = ({ isOpenContact, toggleContact }: Props) => {
               ref={scope}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="text-5xl md:text-6xl lg:text-7xl mt-40 md:mt-0"
+              className="text-5xl md:text-6xl lg:text-7xl mt-40 md:mt-0 font-semibold"
             >
               Creating digital experiences through code and creative design
             </motion.h1>
@@ -62,7 +62,7 @@ export const Hero = ({ isOpenContact, toggleContact }: Props) => {
                 }}
               >
                 <Button
-                  variant="secondary"
+                  variant="primary"
                   iconAfter={<ChevronDoubleDownAnimatedIcon />}
                   onClick={handleClickViewWorks}
                 >
@@ -77,7 +77,7 @@ export const Hero = ({ isOpenContact, toggleContact }: Props) => {
                   delay: 2.2,
                 }}
               >
-                <Button variant="text" onClick={handleClickContact}>
+                <Button variant="secondary" onClick={handleClickContact}>
                   Ask a question
                 </Button>
               </motion.div>

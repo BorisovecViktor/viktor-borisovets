@@ -42,7 +42,7 @@ export const FAQs = () => {
   return (
     <section id="faqs" className="section">
       <div className="container">
-        <h2 className="text-4xl md:text-7xl lg:text-8xl">FAQs</h2>
+        <h2 className="text-4xl md:text-7xl lg:text-8xl font-semibold">FAQs</h2>
         <div className="mt-10 md:mt-16 lg:mt-20">
           {faqs.map(({ question, answer }, index) => {
             const isSelected = selectedIndex === index
@@ -70,8 +70,8 @@ export const FAQs = () => {
                   </div>
                   <div
                     className={twMerge(
-                      'inline-flex items-center justify-center size-11 border border-stone-400 rounded-full shrink-0 transition duration-300 bg-stone-200',
-                      isSelected && 'rotate-45',
+                      'inline-flex items-center justify-center size-11 border border-stone-400 rounded-full shrink-0 transition duration-300 bg-stone-200 group-hover/faq:bg-stone-900 group-hover/faq:text-stone-200',
+                      isSelected && 'bg-stone-900 text-stone-200 rotate-45',
                     )}
                   >
                     <PlusIcon className="size-6" />
