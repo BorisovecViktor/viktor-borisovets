@@ -7,34 +7,44 @@ import { ArrowLeftIcon, ArrowRightIcon } from '@/assets/icons'
 import image1 from '@/assets/images/testimonial-1.jpg'
 import image2 from '@/assets/images/testimonial-2.jpg'
 import image3 from '@/assets/images/testimonial-3.jpg'
+import image4 from '@/assets/images/testimonial-4.jpg'
 
 const testimonials = [
   {
-    name: 'Sarah Chen',
-    company: 'Pixel Perfect',
-    role: 'Head of Design',
-    quote:
-      "Alex's expertise in both technical development and design created a beautiful, high-performing website.",
-    image: image1,
-    imagePositionY: 0.2,
-  },
-  {
-    name: 'Marcus Rodriguez',
-    company: 'Craft Coffee Co.',
+    name: 'Emily R.',
+    company: 'Brew and Bean Café',
     role: 'Founder',
     quote:
-      'Alex transformed our boutique coffee brand with a website that perfectly balances aesthetics and functionality.',
-    image: image2,
-    imagePositionY: 0.1,
+      'Working with Viktor was a game-changer for our coffee shop. Stunning, user-friendly website that truly captures the cozy vibe of our café also he implemented solid SEO practices.',
+    image: image1,
+    imagePositionY: 0.6,
   },
   {
-    name: 'Emily Watson',
-    company: 'Studio Minimal',
+    name: 'Daniel K.',
+    company: 'Perfect lines',
+    role: 'Marketing Director',
+    quote:
+      'Viktor listened to our needs, delivered on time, and gave our brand a strong online presence. SEO work really paid off — we started getting organic traffic within the first month.',
+    image: image2,
+    imagePositionY: 1,
+  },
+  {
+    name: 'Linda T.',
+    company: 'Studio Max',
     role: 'Creative Director',
     quote:
-      'The collaborative process was amazing. Alex brought lots of fresh perspectives and innovative solutions.',
+      'Viktor designed a sleek, modern site that reflects our business perfectly. He made the whole process smooth and stress-free. Recommend him for anyone looking for quality design and reliability.',
     image: image3,
-    imagePositionY: 0.55,
+    imagePositionY: 0.4,
+  },
+  {
+    name: 'Jason M.',
+    company: 'GreenEdge Solutions',
+    role: 'Project manager',
+    quote:
+      "Viktor's work exceeded our expectations. The website he developed for us is not only beautiful but also super functional. His attention to detail and commitment to quality are outstanding.",
+    image: image4,
+    imagePositionY: 0.6,
   },
 ]
 

@@ -34,9 +34,9 @@ export const useTextRevealAnimation = () => {
         transform: 'translateY(100%)',
       },
       {
-        duration: 0.3,
-        delay: stagger(-0.025, {
-          startDelay: scope.current.querySelectorAll('.word').length * 0.025,
+        duration: 0.2,
+        delay: stagger(-0.015, {
+          startDelay: scope.current.querySelectorAll('.word').length * 0.015,
         }),
       },
     )

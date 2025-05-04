@@ -90,7 +90,7 @@ export const Testimonial = (props: Props & HTMLAttributes<HTMLDivElement>) => {
       <blockquote className="md:col-span-3">
         <div
           ref={quoteScope}
-          className="text-3xl md:text-5xl lg:text-6xl mt-8 md:mt-0"
+          className="text-2xl md:text-3xl lg:text-5xl 3xl:text-6xl mt-8 md:mt-0"
         >
           <span>&ldquo;</span>
           {quote}
