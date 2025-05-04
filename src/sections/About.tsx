@@ -53,7 +53,7 @@ const hobbies = [
   { title: 'Cooking', emoji: '🍳', left: '64%', top: '32%' },
   { title: 'Volunteering', emoji: '📦', left: '29%', top: '58%' },
   { title: 'Astronomy', emoji: '🔭', left: '70%', top: '12%' },
-  { title: 'Gardening', emoji: '🪏', left: '23%', top: '9%' },
+  { title: 'Gardening', emoji: '🪴', left: '23%', top: '9%' },
   { title: 'Psychology', emoji: '🧠', left: '63%', top: '63%' },
 ]
 
