@@ -43,7 +43,7 @@ export const FAQs = () => {
     <section id="faqs" className="section">
       <div className="container">
         <h2 className="text-4xl md:text-7xl lg:text-8xl font-semibold">FAQs</h2>
-        <div className="mt-10 md:mt-16 lg:mt-20">
+        <div className="mt-10 md:mt-20">
           {faqs.map(({ question, answer }, index) => {
             const isSelected = selectedIndex === index
 

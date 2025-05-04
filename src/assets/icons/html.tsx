@@ -7,7 +7,7 @@ type Props = {
 export const HtmlIcon = ({ className }: Props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    fill="white"
+    fill="#33a9dc"
     viewBox="0 0 32 32"
     className={twMerge(className)}
   >

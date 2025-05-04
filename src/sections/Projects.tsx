@@ -54,7 +54,7 @@ export const Projects = () => (
       <p className="mt-4 text-xl md:text-3xl">
         See how long I transformed concepts into engaging digital experiences
       </p>
-      <div className="mt-10 md:mt-20 flex flex-col gap-20">
+      <div className="mt-10 md:mt-20 flex flex-col gap-10 md:gap-20">
         {portfolioProjects.map(
           ({ title, company, year, results, link, image }, index) => (
             <Card

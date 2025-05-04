@@ -69,7 +69,7 @@ export const Testimonials = () => {
     })
 
   return (
-    <section id="testimonials" className="section">
+    <section id="testimonials">
       <h2
         ref={titleRef}
         className="text-4xl md:text-7xl lg:text-8xl font-semibold flex flex-col overflow-hidden tracking-tighter"
@@ -92,7 +92,7 @@ export const Testimonials = () => {
         </motion.span>
       </h2>
       <div className="container">
-        <div className="mt-20">
+        <div className="mt-10 md:mt-20">
           <AnimatePresence mode="wait" initial={false}>
             {testimonials.map(
               ({ name, company, role, quote, image, imagePositionY }, index) =>
@@ -110,7 +110,7 @@ export const Testimonials = () => {
             )}
           </AnimatePresence>
         </div>
-        <div className="flex gap-4 mt-6 lg:mt-10">
+        <div className="flex gap-8 mt-4 lg:mt-6">
           <button onClick={handleClickPrev} className={buttonClasses}>
             <ArrowLeftIcon className="size-6" />
           </button>

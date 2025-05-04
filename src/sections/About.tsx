@@ -4,25 +4,41 @@ import { useEffect, useRef } from 'react'
 import { useTextRevealAnimation } from '@/hooks/useTextRevealAnimation'
 import { useInView } from 'motion/react'
 import { motion } from 'framer-motion'
-import { CssIcon, HtmlIcon, JsIcon } from '@/assets/icons'
+import {
+  CssIcon,
+  FigmaIcon,
+  HtmlIcon,
+  JestIcon,
+  JsIcon,
+  MaterialUiIcon,
+  NextJsIcon,
+  ReactHookFormIcon,
+  ReactIcon,
+  ReactQueryIcon,
+  ReduxIcon,
+  TailwindIcon,
+  TypescriptIcon,
+  ViteIcon,
+  WebpackIcon,
+} from '@/assets/icons'
 import { Card, CardHeader, ToolboxItems } from '@/components'
 
 const toolboxItems = [
   { title: 'JavaScript', iconType: JsIcon },
   { title: 'HTML5', iconType: HtmlIcon },
   { title: 'CSS3', iconType: CssIcon },
-  { title: 'React', iconType: HtmlIcon },
-  { title: 'Next.js', iconType: HtmlIcon },
-  { title: 'Typescript', iconType: HtmlIcon },
-  { title: 'Redux toolkit', iconType: HtmlIcon },
-  { title: 'React query', iconType: HtmlIcon },
-  { title: 'Material UI', iconType: HtmlIcon },
-  { title: 'Tailwind css', iconType: HtmlIcon },
-  { title: 'React hook form', iconType: HtmlIcon },
-  { title: 'Jest', iconType: HtmlIcon },
-  { title: 'Webpack', iconType: HtmlIcon },
-  { title: 'Vite', iconType: HtmlIcon },
-  { title: 'Figma', iconType: HtmlIcon },
+  { title: 'React', iconType: ReactIcon },
+  { title: 'Next.js', iconType: NextJsIcon },
+  { title: 'Typescript', iconType: TypescriptIcon },
+  { title: 'Redux toolkit', iconType: ReduxIcon },
+  { title: 'React query', iconType: ReactQueryIcon },
+  { title: 'Material UI', iconType: MaterialUiIcon },
+  { title: 'Tailwind css', iconType: TailwindIcon },
+  { title: 'React hook form', iconType: ReactHookFormIcon },
+  { title: 'Jest', iconType: JestIcon },
+  { title: 'Webpack', iconType: WebpackIcon },
+  { title: 'Vite', iconType: ViteIcon },
+  { title: 'Figma', iconType: FigmaIcon },
 ]
 
 const hobbies = [
@@ -33,12 +49,12 @@ const hobbies = [
   { title: 'Music', emoji: '🎵', left: '78%', top: '45%' },
   { title: 'Fitness', emoji: '🏋️‍♂️', left: '1%', top: '65%' },
   { title: 'Reading', emoji: '📚', left: '45%', top: '70%' },
-  { title: 'Yoga', emoji: '📚', left: '16%', top: '76%' },
-  { title: 'Cooking', emoji: '📚', left: '64%', top: '32%' },
-  { title: 'Volunteering', emoji: '📚', left: '29%', top: '58%' },
-  { title: 'Astronomy', emoji: '📚', left: '70%', top: '12%' },
-  { title: 'Gardening', emoji: '📚', left: '23%', top: '9%' },
-  { title: 'Psychology', emoji: '📚', left: '63%', top: '63%' },
+  { title: 'Yoga', emoji: '🧘🏻‍♂️', left: '16%', top: '76%' },
+  { title: 'Cooking', emoji: '🍳', left: '64%', top: '32%' },
+  { title: 'Volunteering', emoji: '📦', left: '29%', top: '58%' },
+  { title: 'Astronomy', emoji: '🔭', left: '70%', top: '12%' },
+  { title: 'Gardening', emoji: '🪏', left: '23%', top: '9%' },
+  { title: 'Psychology', emoji: '🧠', left: '63%', top: '63%' },
 ]
 
 export const About = () => {

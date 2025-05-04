@@ -70,7 +70,7 @@ export const Testimonial = (props: Props & HTMLAttributes<HTMLDivElement>) => {
       )}
       {...rest}
     >
-      <div className="aspect-square md:aspect-[9/16] md:col-span-2 relative">
+      <div className="aspect-square md:aspect-[9/12] max-h-[1000px] md:col-span-2 relative">
         <motion.div
           initial={{
             width: '100%',
