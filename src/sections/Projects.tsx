@@ -8,13 +8,9 @@ const portfolioProjects = [
   {
     company: 'Fabnite',
     year: '2025',
-    title:
-      'Explore and buy tickets for events and exciting experiences near you',
+    title: 'Explore and buy tickets for events and exciting experiences',
     results: [
       { title: 'Setup the project from 0 to production' },
-      {
-        title: 'Make recommendations for improvements to existing architecture',
-      },
       { title: 'Choice stack of technologies' },
       { title: 'Producing, testing and debugging code' },
       { title: 'Optimize app for maximum performance' },
@@ -26,13 +22,9 @@ const portfolioProjects = [
   {
     company: 'Fabnite',
     year: '2025',
-    title:
-      'Explore and buy tickets for events and exciting experiences near you.',
+    title: 'Explore and buy tickets for events and exciting experiences',
     results: [
       { title: 'Setup the project from 0 to production' },
-      {
-        title: 'Make recommendations for improvements to existing architecture',
-      },
       { title: 'Choice stack of technologies' },
       { title: 'Producing, testing and debugging code' },
       { title: 'Optimize app for maximum performance' },
@@ -44,13 +36,9 @@ const portfolioProjects = [
   {
     company: 'Fabnite',
     year: '2025',
-    title:
-      'Explore and buy tickets for events and exciting experiences near you...',
+    title: 'Explore and buy tickets for events and exciting experiences',
     results: [
       { title: 'Setup the project from 0 to production' },
-      {
-        title: 'Make recommendations for improvements to existing architecture',
-      },
       { title: 'Choice stack of technologies' },
       { title: 'Producing, testing and debugging code' },
       { title: 'Optimize app for maximum performance' },
