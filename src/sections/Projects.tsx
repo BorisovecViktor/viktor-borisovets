@@ -1,47 +1,63 @@
-import darkSaasLandingPage from '@/assets/images/dark-saas-landing-page.png'
-import lightSaasLandingPage from '@/assets/images/light-saas-landing-page.png'
-import aiStartupLandingPage from '@/assets/images/ai-startup-landing-page.png'
-import { CheckIcon, ArrowUpRightIcon } from '@/assets/icons'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button, Card } from '@/components'
+import project1 from '@/assets/images/project-1.png'
+import { CheckIcon, ArrowUpRightIcon } from '@/assets/icons'
 
 const portfolioProjects = [
   {
-    company: 'Acme Corp',
-    year: '2022',
-    title: 'Dark Saas Landing Page',
+    company: 'Fabnite',
+    year: '2025',
+    title:
+      'Explore and buy tickets for events and exciting experiences near you',
     results: [
-      { title: 'Enhanced user experience by 40%' },
-      { title: 'Improved site speed by 50%' },
-      { title: 'Increased mobile traffic by 35%' },
+      { title: 'Setup the project from 0 to production' },
+      {
+        title: 'Make recommendations for improvements to existing architecture',
+      },
+      { title: 'Choice stack of technologies' },
+      { title: 'Producing, testing and debugging code' },
+      { title: 'Optimize app for maximum performance' },
+      { title: 'Implementing SEO best practices' },
     ],
-    link: 'https://youtu.be/4k7IdSLxh6w',
-    image: darkSaasLandingPage,
+    link: 'https://fabnite.com',
+    image: project1,
   },
   {
-    company: 'Innovative Co',
-    year: '2021',
-    title: 'Light Saas Landing Page',
+    company: 'Fabnite',
+    year: '2025',
+    title:
+      'Explore and buy tickets for events and exciting experiences near you.',
     results: [
-      { title: 'Boosted sales by 20%' },
-      { title: 'Expanded customer reach by 35%' },
-      { title: 'Increased brand awareness by 15%' },
+      { title: 'Setup the project from 0 to production' },
+      {
+        title: 'Make recommendations for improvements to existing architecture',
+      },
+      { title: 'Choice stack of technologies' },
+      { title: 'Producing, testing and debugging code' },
+      { title: 'Optimize app for maximum performance' },
+      { title: 'Implementing SEO best practices' },
     ],
-    link: 'https://youtu.be/7hi5zwO75yc',
-    image: lightSaasLandingPage,
+    link: 'https://fabnite.com',
+    image: project1,
   },
   {
-    company: 'Quantum Dynamics',
-    year: '2023',
-    title: 'AI Startup Landing Page',
+    company: 'Fabnite',
+    year: '2025',
+    title:
+      'Explore and buy tickets for events and exciting experiences near you...',
     results: [
-      { title: 'Enhanced user experience by 40%' },
-      { title: 'Improved site speed by 50%' },
-      { title: 'Increased mobile traffic by 35%' },
+      { title: 'Setup the project from 0 to production' },
+      {
+        title: 'Make recommendations for improvements to existing architecture',
+      },
+      { title: 'Choice stack of technologies' },
+      { title: 'Producing, testing and debugging code' },
+      { title: 'Optimize app for maximum performance' },
+      { title: 'Implementing SEO best practices' },
     ],
-    link: 'https://youtu.be/Z7I5uSRHMHg',
-    image: aiStartupLandingPage,
+    link: 'https://fabnite.com',
+    image: project1,
   },
 ]
 
@@ -49,10 +65,10 @@ export const Projects = () => (
   <section id="projects" className="section">
     <div className="container">
       <h2 className="text-4xl md:text-7xl lg:text-8xl font-semibold">
-        Last landing page projects
+        Some completed projects
       </h2>
       <p className="mt-4 text-xl md:text-3xl">
-        See how long I transformed concepts into engaging digital experiences
+        Real results from real projects — see what I’ve built
       </p>
       <div className="mt-10 md:mt-20 flex flex-col gap-10 md:gap-20">
         {portfolioProjects.map(
@@ -84,7 +100,7 @@ export const Projects = () => (
                       </li>
                     ))}
                   </ul>
-                  <Link href={link}>
+                  <Link href={link} target="_blank">
                     <Button
                       variant="primary"
                       iconAfter={<ArrowUpRightIcon className="size-5" />}
@@ -99,7 +115,7 @@ export const Projects = () => (
                   <Image
                     src={image}
                     alt={title}
-                    className="mt-8 -mb-4 md:-mb-0 md:mx-auto lg:mt-0 lg:absolute lg:max-w-none"
+                    className="mt-8 -mb-4 md:-mb-0 md:mx-auto lg:mt-0 lg:absolute lg:max-w-none rounded-3xl border-2 border-white/20"
                   />
                 </div>
               </div>

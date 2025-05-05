@@ -78,14 +78,14 @@ export const About = () => {
           ref={scope}
           className="text-4xl md:text-7xl lg:text-8xl lg:w-[80%] font-semibold"
         >
-          Building beautiful websites with clean code and thoughtful design to
-          help your business and stand out online
+          Creating stunning websites with clean code and a thoughtful design to
+          elevate your business online
         </h2>
         <div className="mt-10 md:mt-20 flex flex-col gap-8 md:gap-0.5 md:grid md:grid-cols-4">
           <Card className="h-[320px] lg:h-[400px] 3xl:h-[620px] md:col-span-2">
             <CardHeader
               title="My toolbox"
-              description="Explore the technologies and tools I use to craft exception digital experiences"
+              description="Take a look at the stack I use to build outstanding digital experiences"
             />
             <ToolboxItems
               items={toolboxItems}
@@ -101,7 +101,7 @@ export const About = () => {
           <Card className="flex flex-col h-[320px] lg:h-[400px] 3xl:h-[620px] md:col-span-2">
             <CardHeader
               title="Beyond the code"
-              description="Explore my interests and hobbies beyond the digital realm"
+              description="Explore the hobbies and interests that fuel my creativity"
             />
             <div ref={constrainRef} className="relative flex-1">
               {hobbies.map(({ title, emoji, left, top }) => (

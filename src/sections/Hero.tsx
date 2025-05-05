@@ -137,7 +137,8 @@ export const Hero = ({ isOpenContact, toggleContact }: Props) => {
               animate={{ opacity: 1 }}
               className="text-5xl md:text-6xl lg:text-7xl mt-40 md:mt-0 font-semibold text-center"
             >
-              Creating digital experiences through code and creative design
+              Bringing digital experiences to life through a blend of code and
+              creative design
             </motion.h1>
             <div className="flex flex-col md:flex-row items-center mt-10 gap-6">
               <motion.div

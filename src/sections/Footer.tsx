@@ -62,7 +62,7 @@ export const Footer = ({ isOpenContact, toggleContact }: Props) => {
                 ref={scope}
                 className="text-4xl md:text-7xl lg:text-8xl mt-8 font-extralight"
               >
-                Enough talk. Let&apos;s make something great together.
+                Enough talk. Let&apos;s build something legendary and unforgettable together.
               </h2>
               <Button
                 variant="secondary"

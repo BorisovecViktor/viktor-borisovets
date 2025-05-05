@@ -90,7 +90,7 @@ export const Testimonials = () => {
             x: transformTop,
           }}
         >
-          Some nice words from my past clients
+          Here&apos;s what my awesome clients think
         </motion.span>
         <motion.span
           className="whitespace-nowrap self-end text-red-orange-500"
@@ -98,7 +98,7 @@ export const Testimonials = () => {
             x: transformBottom,
           }}
         >
-          Some nice words from my past clients
+          Here&apos;s what my awesome clients think
         </motion.span>
       </h2>
       <div className="container">
