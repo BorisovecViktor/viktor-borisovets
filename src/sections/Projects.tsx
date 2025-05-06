@@ -22,7 +22,7 @@ const portfolioProjects = [
   {
     company: 'Fabnite',
     year: '2025',
-    title: 'Explore and buy tickets for events and exciting experiences',
+    title: 'Explore and buy tickets for events and exciting experiences.',
     results: [
       { title: 'Setup the project from 0 to production' },
       { title: 'Choice stack of technologies' },
@@ -36,7 +36,7 @@ const portfolioProjects = [
   {
     company: 'Fabnite',
     year: '2025',
-    title: 'Explore and buy tickets for events and exciting experiences',
+    title: 'Explore and buy tickets for events and exciting experiences...',
     results: [
       { title: 'Setup the project from 0 to production' },
       { title: 'Choice stack of technologies' },
